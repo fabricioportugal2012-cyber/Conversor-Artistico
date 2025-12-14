@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.ico">
+    <title>Foto em Desenho | Transforme imagens em arte</title>
+    <meta name="description"
+        content="Executável simples e rápido que transforma qualquer foto em desenho artístico com apenas um clique." />
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #22c55e;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(23, 23, 323), rgba(215, 224, 220));
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-image: url(img/Desenho.jpg);
+            background-position: center;
+            background-size:contain;
+            min-height: 400px;
+            color: black;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .how-it-works {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .step {
+            padding: 20px;
+        }
+
+        .step span {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .cta {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+            color: #cbd5f5;
+        }
+
+        footer {
+            background: #020617;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Transforme qualquer foto em desenho</h1>
+        <p>Um executável simples, rápido e fácil de usar que converte suas imagens em desenhos artísticos com apenas um
+            clique.</p>
+        <a href="#download" class="btn">Baixar Agora</a>
+    </header>
+
+    <section>
+        <h2 style="text-align:center; margin-bottom:40px;">Por que escolher este programa?</h2>
+        <div class="features">
+            <div class="card">
+                <h3>Fácil de Usar</h3>
+                <p>Interface simples e intuitiva, ideal para qualquer pessoa, mesmo sem experiência.</p>
+            </div>
+            <div class="card">
+                <h3>Resultado Instantâneo</h3>
+                <p>Transforme fotos em desenhos em segundos, sem configurações complicadas.</p>
+            </div>
+            <div class="card">
+                <h3>Alta Qualidade</h3>
+                <p>Desenhos com visual profissional, prontos para uso pessoal ou comercial.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 style="text-align:center; margin-bottom:40px;">Como funciona</h2>
+        <div class="how-it-works">
+            <div class="step">
+                <span>1</span>
+                <p>Abra o programa no seu computador.</p>
+            </div>
+            <div class="step">
+                <span>2</span>
+                <p>Selecione a foto desejada.</p>
+            </div>
+            <div class="step">
+                <span>3</span>
+                <p>Clique em transformar e pronto!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="cta">
+        <h2>Pronto para transformar suas fotos?</h2>
+        <p>Baixe agora o executável e comece a criar desenhos incríveis em poucos segundos.</p>
+        <a href="https://chk.eduzz.com/E9OO2Q1G9B" class="btn">Download do Executável</a>
+    </section>
+
+    <footer>
+        <p>© 2025 - Todos os direitos reservados | Conversor Artistico</p>
+    </footer>
+
+</body>
+
+</html>
