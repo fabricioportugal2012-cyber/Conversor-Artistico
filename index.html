@@ -25,7 +25,7 @@
         }
 
         body {
-            background: linear-gradient(rgba(23, 23, 323), rgba(215, 224, 220));
+            background: linear-gradient(rgba(23, 23, 323), rgba(215, 224, 220)); 
             color: var(--dark);
             line-height: 1.6;
         }
@@ -34,10 +34,9 @@
             background-image: url(img/Desenho.jpg);
             background-position: center;
             background-size:contain;
-            min-height: 400px;
+            min-height: 200px;
             color: black;
             text-align: center;
-            font-weight: 900;
         }
 
         header h1 {
@@ -72,7 +71,26 @@
             padding: 60px 20px;
             max-width: 1100px;
             margin: auto;
+            align-items: center;
+            justify-content: cente;
         }
+
+        .corpo {
+            text-align: center;
+            gap: 20px;
+        }
+
+        .btn {
+            width: 200px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .button {
+            transform: translateX(300px);
+        }
+
+
 
         .features {
             display: grid;
@@ -82,7 +100,7 @@
 
         .card {
             background: white;
-            padding: 30px;
+            padding: 80px;
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             text-align: center;
@@ -103,10 +121,19 @@
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             text-align: center;
+            transform:translateX(10%)
         }
 
         .step {
             padding: 20px;
+            
+        }
+
+        span a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            
         }
 
         .step span {
@@ -119,6 +146,11 @@
             border-radius: 50%;
             margin-bottom: 10px;
             font-weight: bold;
+            text-align: center;
+        }
+
+        .step span:hover {
+            background-color: var(--secondary);
         }
 
         .cta {
@@ -157,13 +189,17 @@
 <body>
 
     <header>
-        <h1>Transforme qualquer foto em desenho</h1>
-        <p>Um executável simples, rápido e fácil de usar que converte suas imagens em desenhos artísticos com apenas um
-            clique.</p>
-        <a href="#download" class="btn">Baixar Agora</a>
+       
     </header>
 
-    <section>
+    <section class="corpo">
+
+         <h1 class="titulo">Transforme qualquer foto em desenho</h1>
+        <p class="sub-titulo">Um executável simples, rápido e fácil de usar que converte suas imagens em desenhos artísticos com apenas um
+            clique.</p>
+        <a href="#download" class="btn">Baixar Agora</a>
+
+
         <h2 style="text-align:center; margin-bottom:40px;">Por que escolher este programa?</h2>
         <div class="features">
             <div class="card">
@@ -181,12 +217,12 @@
         </div>
     </section>
 
-    <section>
+    <section class="steps">
         <h2 style="text-align:center; margin-bottom:40px;">Como funciona</h2>
         <div class="how-it-works">
             <div class="step">
                 <span>1</span>
-                <p>Abra o programa no seu computador.</p>
+                <p>Abra o programa no seu computador</p>
             </div>
             <div class="step">
                 <span>2</span>
@@ -195,6 +231,10 @@
             <div class="step">
                 <span>3</span>
                 <p>Clique em transformar e pronto!</p>
+            </div>
+            <br>
+            <div class="button">
+            <a href="tutorial.html" class="btn">Tutorial</a>
             </div>
         </div>
     </section>
