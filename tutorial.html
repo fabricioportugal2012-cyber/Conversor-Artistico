@@ -1,21 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor Artistico</title>
 </head>
-<body>
-    <section>
-        <div>
-            <p>Baixe a pasta raiz e salve-a onde desejar.</p>
-            <img src="img/open.jpg" alt="open">
-        </div>
 
-        <div>
-            
-        </div>
-    </section>
-    
+<style>
+    body {
+        width: 100vh;
+        height: 100%;
+        background: linear-gradient(rgba(23, 23, 323), rgba(215, 224, 220));
+    }
+
+    .image1 {
+        min-width: 200px;
+        min-height: 200px;
+        border: 2px solid black;
+    }
+
+    .image2 {
+        width: 600px;
+        height: 200px;
+
+    }
+
+    .image3 {
+        width: 600px;
+        height: 200px;
+        border: 2px solid black;
+
+    }
+
+    .imagens1 {
+        align-items: center;
+        padding: 20px;
+    }
+
+
+    .imagens {
+        gap: 10px;
+        max-width: 100%;
+        height: auto;
+
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 300px;
+    }
+
+    .image4 {
+        width: 300px;
+        height: 500px;
+        border: 2px solid black;
+    }
+
+    .btn {
+        display: inline-block;
+        background: rgb(6, 200, 6);
+        color: white;
+        padding: 14px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: transform 0.2s, opacity 0.2s;
+        margin-top: 180px;
+        transform: translateX(100%);
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+
+    .logo {
+        width: 60px;
+        padding: 20px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+</style>
+
+<header>
+    <img src="img/logo.ico" alt="logo" class="logo">
+    <h1>Tutorial - Conversor-Artistico</h1>
+</header>
+
+<body>
+    <div class="container">
+
+        <section class="imagens1">
+
+            <div>
+                <p>1-Baixe a pasta raiz e salve-a onde desejar.</p>
+                <img src="img/open.jpg" alt="open" class="image1">
+            </div>
+
+            <div>
+                <p>O programa é bem simples de usar !</p>
+                <img src="img/conversor.jpg" alt="conversor" class="image4">
+            </div>
+        </section>
+
+        <section class="imagens">
+
+
+            <div>
+                <p>2-Abra a Sub-pasta "app"</p>
+                <img src="img/pasta-app.jpg" alt="pasta-app" class="image2">
+
+            </div>
+
+            <div>
+                <p>3-Aqui esta o Executador do programa</p>
+                <img src="img/executar.jpg" alt="executar" class="image3">
+            </div>
+            <a href="index.html" class="btn">Voltar</a>
+
+        </section>
+
+    </div>
 </body>
+<p>
+<h4>Caso não receba os arquivos em um pasta apenas crie uma e coloque todos os arquivos</h4>
+</p>
+
 </html>
