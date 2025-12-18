@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/logo.ico">
     <title>Foto em Desenho | Transforme imagens em arte</title>
-    <meta name="description"
-        content="Executável simples e rápido que transforma qualquer foto em desenho artístico com apenas um clique." />
     <style>
         :root {
             --primary: #4f46e5;
@@ -21,166 +19,148 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
 
         body {
-            background: linear-gradient(rgba(23, 23, 323), rgba(215, 224, 220)); 
+            /* Correção do gradiente */
+            background: linear-gradient(180deg, #171720 0%, #d7e0dc 100%);
             color: var(--dark);
             line-height: 1.6;
+            overflow-x: hidden; /* Evita rolagem horizontal lateral */
         }
 
         header {
-            background-image: url(img/Desenho.jpg);
+            background-image: url('img/Desenho.jpg');
             background-position: center;
-            background-size:contain;
-            min-height: 200px;
-            color: black;
+            background-size: cover;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .corpo {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
             text-align: center;
         }
 
-        header h1 {
-            font-size: 2.5rem;
+        .titulo {
+            font-size: 2.2rem;
             margin-bottom: 15px;
+            color: white; /* Ajustado para contraste com o fundo escuro */
         }
 
-        header p {
+        .sub-titulo {
             font-size: 1.1rem;
             max-width: 700px;
             margin: 0 auto 30px;
+            color: #cbd5f5;
         }
 
+        /* Botões padronizados */
         .btn {
             display: inline-block;
             background: var(--secondary);
             color: white;
-            padding: 14px 28px;
-            border-radius: 8px;
+            padding: 16px 32px;
+            border-radius: 50px;
             text-decoration: none;
             font-size: 1rem;
             font-weight: bold;
-            transition: transform 0.2s, opacity 0.2s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+            margin: 10px;
+            min-width: 220px;
         }
 
         .btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             opacity: 0.9;
         }
 
-        section {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: auto;
-            align-items: center;
-            justify-content: cente;
-        }
-
-        .corpo {
-            text-align: center;
-            gap: 20px;
-        }
-
-        .btn {
-            width: 200px;
-            padding: 20px;
-            margin: 20px;
-        }
-
-        .button {
-            transform: translateX(300px);
-        }
-
-
-
+        /* Grid de diferenciais */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
         }
 
         .card {
             background: white;
-            padding: 80px;
+            padding: 40px 20px; /* Padding reduzido para mobile */
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card h3 { margin-bottom: 15px; color: var(--primary); }
+
+        /* Sessão "Como Funciona" */
+        .steps {
+            background: rgba(255,255,255,0.1);
+            padding: 60px 20px;
             text-align: center;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-
-        .card p {
-            color: var(--gray);
-            font-size: 0.95rem;
         }
 
         .how-it-works {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            text-align: center;
-            transform:translateX(10%)
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 40px auto;
         }
 
         .step {
+            position: relative;
             padding: 20px;
-            
-        }
-
-        span a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            
         }
 
         .step span {
             display: inline-block;
             background: var(--primary);
             color: white;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
             border-radius: 50%;
-            margin-bottom: 10px;
+            font-size: 1.2rem;
             font-weight: bold;
-            text-align: center;
+            margin-bottom: 15px;
         }
 
-        .step span:hover {
-            background-color: var(--secondary);
-        }
-
+        /* Call to Action Final */
         .cta {
             background: var(--dark);
             color: white;
             text-align: center;
-            padding: 70px 20px;
+            padding: 80px 20px;
         }
 
-        .cta h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .cta p {
-            margin-bottom: 25px;
-            color: #cbd5f5;
-        }
+        .cta h2 { font-size: 2rem; margin-bottom: 20px; }
 
         footer {
             background: #020617;
             color: #94a3b8;
             text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
+            padding: 30px;
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
+        /* AJUSTES PARA DISPOSITIVOS MÓVEIS */
+        @media (max-width: 768px) {
+            .titulo { font-size: 1.8rem; }
+            .btn { width: 100%; max-width: 300px; }
+            .card { padding: 30px 15px; }
+            
+            /* Removemos os translateX que quebravam o layout */
+            .button, .how-it-works {
+                transform: none !important; 
             }
         }
     </style>
@@ -189,18 +169,14 @@
 <body>
 
     <header>
-       
-    </header>
+        </header>
 
     <section class="corpo">
-
-         <h1 class="titulo">Transforme qualquer foto em desenho</h1>
-        <p class="sub-titulo">Um executável simples, rápido e fácil de usar que converte suas imagens em desenhos artísticos com apenas um
-            clique.</p>
+        <h1 class="titulo">Transforme qualquer foto em desenho</h1>
+        <p class="sub-titulo">Um executável simples, rápido e fácil de usar que converte suas imagens em desenhos artísticos com apenas um clique.</p>
         <a href="#download" class="btn">Baixar Agora</a>
 
-
-        <h2 style="text-align:center; margin-bottom:40px;">Por que escolher este programa?</h2>
+        <h2 style="margin: 60px 0 30px; color: #171720;">Por que escolher este programa?</h2>
         <div class="features">
             <div class="card">
                 <h3>Fácil de Usar</h3>
@@ -218,7 +194,7 @@
     </section>
 
     <section class="steps">
-        <h2 style="text-align:center; margin-bottom:40px;">Como funciona</h2>
+        <h2 style="margin-bottom:20px;">Como funciona</h2>
         <div class="how-it-works">
             <div class="step">
                 <span>1</span>
@@ -232,23 +208,19 @@
                 <span>3</span>
                 <p>Clique em transformar e pronto!</p>
             </div>
-            <br>
-            <div class="button">
-            <a href="tutorial.html" class="btn">Tutorial</a>
-            </div>
         </div>
+        <a href="tutorial.html" class="btn" style="background: var(--primary);">Ver Tutorial Completo</a>
     </section>
 
     <section id="download" class="cta">
         <h2>Pronto para transformar suas fotos?</h2>
-        <p>Baixe agora o executável e comece a criar desenhos incríveis em poucos segundos.</p>
+        <p style="margin-bottom: 30px;">Baixe agora o executável e comece a criar desenhos incríveis em poucos segundos.</p>
         <a href="https://app.monetizze.com.br/checkout/DMJ367908" class="btn">Download do Executável</a>
     </section>
 
     <footer>
-        <p>© 2025 - Todos os direitos reservados | Conversor Artistico</p>
+        <p>© 2025 - Todos os direitos reservados | Conversor Artístico</p>
     </footer>
 
 </body>
-
 </html>

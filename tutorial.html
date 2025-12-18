@@ -1,136 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor Artistico</title>
+    <title>Conversor Artístico - Tutorial</title>
+    <style>
+        /* Reset básico para evitar rolagens estranhas */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            /* Corrigido o gradiente para valores válidos */
+            background: linear-gradient(180deg, rgba(23, 23, 32, 1) 0%, rgba(215, 224, 220, 1) 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            flex-wrap: wrap; /* Permite quebrar linha em telas muito pequenas */
+            justify-content: center;
+        }
+
+        .logo {
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            /* Cria colunas que se ajustam sozinhas (mínimo 300px) */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .passo {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .passo p {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        /* Imagens agora são flexíveis: ocupam 100% da largura do card, mas respeitam o tamanho original */
+        img.tutorial-img {
+            width: 100%;
+            max-width: 100%;
+            height: auto; 
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn-container {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #06c806;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #05a805;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            color: #444;
+            font-size: 0.9rem;
+        }
+
+        /* --- AJUSTES ESPECÍFICOS PARA CELULAR --- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+
+            .passo {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
-
-<style>
-    body {
-        width: 100vh;
-        height: 100%;
-        background: linear-gradient(rgba(23, 23, 323), rgba(215, 224, 220));
-    }
-
-    .image1 {
-        min-width: 200px;
-        min-height: 200px;
-        border: 2px solid black;
-    }
-
-    .image2 {
-        width: 600px;
-        height: 200px;
-
-    }
-
-    .image3 {
-        width: 600px;
-        height: 200px;
-        border: 2px solid black;
-
-    }
-
-    .imagens1 {
-        align-items: center;
-        padding: 20px;
-    }
-
-
-    .imagens {
-        gap: 10px;
-        max-width: 100%;
-        height: auto;
-
-    }
-
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 300px;
-    }
-
-    .image4 {
-        width: 300px;
-        height: 500px;
-        border: 2px solid black;
-    }
-
-    .btn {
-        display: inline-block;
-        background: rgb(6, 200, 6);
-        color: white;
-        padding: 14px 28px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 1rem;
-        font-weight: bold;
-        transition: transform 0.2s, opacity 0.2s;
-        margin-top: 180px;
-        transform: translateX(100%);
-    }
-
-    .btn:hover {
-        opacity: 0.9;
-    }
-
-
-    .logo {
-        width: 60px;
-        padding: 20px;
-    }
-
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-</style>
+<body>
 
 <header>
     <img src="img/logo.ico" alt="logo" class="logo">
-    <h1>Tutorial - Conversor-Artistico</h1>
+    <h1>Tutorial: Conversor Artístico</h1>
 </header>
 
-<body>
-    <div class="container">
+<main class="container">
+    <section class="passo">
+        <p>1. Baixe a pasta raiz e salve-a onde desejar.</p>
+        <img src="img/open.jpg" alt="Abrir pasta" class="tutorial-img">
+    </section>
 
-        <section class="imagens1">
+    <section class="passo">
+        <p>2. Abra a Sub-pasta "app"</p>
+        <img src="img/pasta-app.jpg" alt="Pasta app" class="tutorial-img">
+    </section>
 
-            <div>
-                <p>1-Baixe a pasta raiz e salve-a onde desejar.</p>
-                <img src="img/open.jpg" alt="open" class="image1">
-            </div>
+    <section class="passo">
+        <p>3. Aqui está o Executador do programa</p>
+        <img src="img/executar.jpg" alt="Executador" class="tutorial-img">
+    </section>
 
-            <div>
-                <p>O programa é bem simples de usar !</p>
-                <img src="img/conversor.jpg" alt="conversor" class="image4">
-            </div>
-        </section>
+    <section class="passo">
+        <p>O programa é bem simples de usar!</p>
+        <img src="img/conversor.jpg" alt="Interface" class="tutorial-img">
+    </section>
+</main>
 
-        <section class="imagens">
+<div class="btn-container">
+    <a href="index.html" class="btn">Voltar</a>
+</div>
 
+<footer>
+    <h4>Aviso: Caso não receba os arquivos em uma pasta, crie uma e coloque todos os arquivos nela.</h4>
+</footer>
 
-            <div>
-                <p>2-Abra a Sub-pasta "app"</p>
-                <img src="img/pasta-app.jpg" alt="pasta-app" class="image2">
-
-            </div>
-
-            <div>
-                <p>3-Aqui esta o Executador do programa</p>
-                <img src="img/executar.jpg" alt="executar" class="image3">
-            </div>
-            <a href="index.html" class="btn">Voltar</a>
-
-        </section>
-
-    </div>
 </body>
-<p>
-<h4>Caso não receba os arquivos em um pasta apenas crie uma e coloque todos os arquivos</h4>
-</p>
-
 </html>
